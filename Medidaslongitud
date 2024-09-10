@@ -1,0 +1,22 @@
+def convertir_metros(metros):
+    centimetros = metros * 100
+    pies = metros * 3.28084
+    pulgadas = pies * 12
+
+    return centimetros, pies, pulgadas
+
+def main():
+    try:
+        metros = float(input("Ingrese la medida en metros: "))
+        centimetros, pies, pulgadas = convertir_metros(metros)
+
+        print(f"{metros} metros son:")
+        print(f"{centimetros:.2f} centímetros")
+        print(f"{pies:.2f} pies")
+        print(f"{pulgadas:.2f} pulgadas")
+
+    except ValueError:
+        print("Por favor, ingrese un número válido.")
+
+if __name__ == "__main__":
+    main()
